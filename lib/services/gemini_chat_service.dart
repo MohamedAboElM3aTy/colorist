@@ -15,13 +15,9 @@ class ConversationStateNotifier extends Notifier<ConversationState> {
   @override
   ConversationState build() => ConversationState.idle;
 
-  void busy() {
-    state = ConversationState.busy;
-  }
+  void busy() => state = ConversationState.busy;
 
-  void idle() {
-    state = ConversationState.idle;
-  }
+  void idle() => state = ConversationState.idle;
 }
 
 final conversationStateProvider = NotifierProvider<ConversationStateNotifier, ConversationState>(
